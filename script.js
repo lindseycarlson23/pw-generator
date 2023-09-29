@@ -17,7 +17,7 @@ generateBtn.addEventListener("click", writePassword);
 
 // Write password to the #password input
 function writePassword() {
-  //getInput();  //returns true or false (from video)
+  
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
@@ -25,14 +25,14 @@ function writePassword() {
 
 }
 
-
+//this function takes the user's input and generates the password randomly
 function generatePassword() {
   var newPassword = "";
   var options = [];
   numChar = parseInt(prompt("How many characters do you want your password to be? (8 - 128 characters)"));
-debugger;
 
-  if (isNaN(numChar) || numChar < 8 || numChar > 128) {   ///hoping these are all false
+
+  if (isNaN(numChar) || numChar < 8 || numChar > 128) {   
     alert("Must be a number from 8 - 128 digits. Please try again.");
     return false;
   }
@@ -62,7 +62,7 @@ for (let i = 0; i < numChar; i++) {
   console.log(options[randomNumber]);
  
 }
-debugger;
+
 return newPassword; 
 
 }
