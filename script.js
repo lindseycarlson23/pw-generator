@@ -1,11 +1,11 @@
 var numChar = 8;
-var options = [];
 var specialCharArr = ["!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@"];
 var alphaUpperArr = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 var alphaLowerArr = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 var numArray = ["0","1", "2", "3", "4", "5", "6", "7", "8", "9"];
+var randomNumber = [];
 
-// Assignment code here
+
 
 
 // Get references to the #generate element
@@ -27,19 +27,10 @@ function writePassword() {
 
 
 function generatePassword() {
-//Generate password based on prompts
-  getInput()
-  //create array with all possible optons
-
-
-
-return password; 
-
-}
-
-function getInput(){ //function for obtaining the user's input
-  options = [];
+  var newPassword = "";
+  var options = [];
   numChar = parseInt(prompt("How many characters do you want your password to be? (8 - 128 characters)"));
+debugger;
 
   if (isNaN(numChar) || numChar < 8 || numChar > 128) {   ///hoping these are all false
     alert("Must be a number from 8 - 128 digits. Please try again.");
@@ -62,5 +53,16 @@ function getInput(){ //function for obtaining the user's input
     options = options.concat(specialCharArr);
   }
 
-  return true;
+  
+  //number from the user controls how long the for loop runs
+for (let i = 0; i < numChar; i++) {
+  let randomNumber = Math.floor(Math.random() * options.length);
+  newPassword += options[randomNumber];
+ 
+  console.log(options[randomNumber]);
+ 
+}
+debugger;
+return newPassword; 
+
 }
