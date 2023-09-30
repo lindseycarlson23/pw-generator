@@ -18,7 +18,7 @@ This is a tool for any user with a browser to generate a random and potentially 
 Shoutout to the following for inspiration and guidance:
 
 Kai Gurung-Doll, study group member
-Daniel Vega https://www.youtube.com/results?search_query=password+generator+javascript
+Daniel Vega https://www.youtube.com/results?search_query=password+generator+javascript, inspiration for the if statements in the generatePassword function.
 
 ## License
 
